@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <!-- 基础按钮类型 -->
+    <!-- 基础按121212钮类型 -->
     <el-row :gutter="24">
       <el-col :xs="24" :sm="12" :md="8" :lg="12">
         <div class="input-group">
@@ -16,12 +16,7 @@
           <CrystalButton :loading="loading">默认按钮</CrystalButton>
         </div>
       </el-col>
-      <el-col :xs="24" :sm="12" :md="8" :lg="12">
-        <div class="input-group">
-          <h4>主要按钮</h4>
-          <CrystalButton type="primary">主要按钮</CrystalButton>
-        </div>
-      </el-col>
+
       <el-col :xs="24" :sm="12" :md="8" :lg="12">
         <div class="input-group">
           <h4>成功按钮</h4>
