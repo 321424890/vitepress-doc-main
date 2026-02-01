@@ -25,12 +25,6 @@
         </div>
       </el-col>
 
-      <el-col :xs="24" :sm="12" :md="8" :lg="12">
-        <div class="input-group">
-          <h4>信息按钮</h4>
-          <CrystalButton type="info">信息按钮</CrystalButton>
-        </div>
-      </el-col>
     </el-row>
 
     <!-- 按钮尺寸 -->
