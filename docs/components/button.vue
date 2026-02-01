@@ -17,24 +17,14 @@
         </div>
       </el-col>
 
-      <el-col :xs="24" :sm="12" :md="8" :lg="12">
-        <div class="input-group">
-          <h4>成功按钮</h4>
-          <CrystalButton type="success">成功按钮</CrystalButton>
-        </div>
-      </el-col>
+
       <el-col :xs="24" :sm="12" :md="8" :lg="12">
         <div class="input-group">
           <h4>警告按钮</h4>
           <CrystalButton type="warning">警告按钮</CrystalButton>
         </div>
       </el-col>
-      <el-col :xs="24" :sm="12" :md="8" :lg="12">
-        <div class="input-group">
-          <h4>危险按钮</h4>
-          <CrystalButton type="danger">危险按钮</CrystalButton>
-        </div>
-      </el-col>
+
       <el-col :xs="24" :sm="12" :md="8" :lg="12">
         <div class="input-group">
           <h4>信息按钮</h4>
