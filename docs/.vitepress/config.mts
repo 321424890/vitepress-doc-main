@@ -353,7 +353,7 @@ export default defineConfig({
         "@": pathResolve("../../src"),
         "@build": pathResolve("../../build"),
         // 使用用户指定的crystal-ui路径配置
-        "crystalplus-ui": pathResolve("../../../../element-plus-wrapper/packages/crystal-ui/src/index.ts")
+        "crystalplus-ui": pathResolve("../../../element-plus-wrapper/packages/crystal-ui/src/index.ts")
       }
     }
   },
@@ -372,7 +372,7 @@ export default defineConfig({
 
     //编辑本页
     editLink: {
-      pattern: 'https://github.com/yourusername/your-repo/edit/main/docs/:path', // 改成自己的仓库
+      pattern: 'https://github.com/321424890/vitepress-doc-main/edit/main/docs/:path', // 改成自己的仓库
       text: '在GitHub编辑本页'
     },
 
@@ -438,10 +438,10 @@ export default defineConfig({
           ],
         },
         {
-          text: '基础组件',
+          text: '表单组件',
           collapsed: false,
           items: [
-            { text: '输入框', link: '/components/input' },
+            { text: '输入框', link: '/components/basic/input' },
             { text: '选择器', link: '/components/select' },
             { text: '单选框', link: '/components/radio' },
             { text: '复选框', link: '/components/checkbox' },
@@ -569,7 +569,7 @@ export default defineConfig({
 
     //社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourusername' },
+      { icon: 'github', link: 'https://github.com/321424890/vitepress-doc-main' },
       // { icon: 'twitter', link: 'https://twitter.com/yourusername' },
       // { icon: 'discord', link: 'https://discord.com/invite/yourserver' },
       // {
