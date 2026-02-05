@@ -32,6 +32,8 @@
     "xgplayer": "^3.0.23"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "element-plus": "^2.13.2",
     "highlight.js": "^11.11.1"
   }
 }

@@ -1,5 +1,9 @@
 import DefaultTheme from 'vitepress/theme'
 
+// Element Plus 语言设置
+import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+
 // giscusTalk
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 // 进度条
@@ -42,6 +46,11 @@ export default {
   extends: DefaultTheme,
 
   enhanceApp({app , router }) {
+    // Element Plus 配置 - 使用中文语言
+    app.use(ElementPlus, {
+      locale: zhCn
+    })
+
     // 注册全局组件
     app.component('MNavLinks' , MNavLinks) //导航
     app.component('HomeUnderline' , HomeUnderline) // 首页下划线

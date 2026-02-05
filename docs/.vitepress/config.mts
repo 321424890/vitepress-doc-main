@@ -443,9 +443,11 @@ export default defineConfig({
           items: [
             { text: '输入框', link: '/components/basic/input' },
             { text: '数字输入框', link: '/components/basic/input/inputnumber' },
-            { text: '选择器', link: '/components/select' },
-            { text: '单选框', link: '/components/radio' },
-            { text: '复选框', link: '/components/checkbox' },
+            { text: 'select选择器', link: '/components/basic/select' },
+            { text: '日期选择', link: '/components/basic/date-picker' },
+            { text: '时间选择器', link: '/components/basic/time-picker' },
+            { text: '时间点选择', link: '/components/basic/time-select' },
+            { text: '树选择', link: '/components/basic/tree-select' },
           ],
         },
         {
