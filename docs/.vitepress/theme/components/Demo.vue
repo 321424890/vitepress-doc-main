@@ -220,6 +220,8 @@ onMounted(() => {
   border-radius: 8px;
   margin: 16px 0;
   overflow: hidden;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .demo-content {

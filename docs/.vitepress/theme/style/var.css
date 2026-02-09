@@ -3,6 +3,9 @@
   --vp-c-brand-1: #18794e;
   --vp-c-brand-2: #299764;
   --vp-c-brand-3: #30a46c;
+  /* 调整文档内容宽度 */
+  --vp-doc-max-width: 1400px;
+  --vp-layout-max-width: 1400px;
 }
 
 .dark {
@@ -13,11 +16,53 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #bd34fe,
+    #41d1ff
+  );
 
-
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #bd34fe 50%,
+    #47caff 50%
+  );
   --vp-home-hero-image-filter: blur(40px);
+}
+
+/* 调整文档布局 */
+@media (min-width: 768px) {
+  .VPContent {
+    padding-left: 260px;
+  }
+
+  .VPDoc.has-sidebar {
+    padding-right: 24px;
+  }
+
+  .VPDoc .content {
+    max-width: 100%;
+  }
+}
+
+/* 小屏幕设备调整 */
+@media (max-width: 767px) {
+  .VPContent {
+    padding-left: 0;
+  }
+
+  .VPDoc.has-sidebar {
+    padding-right: 0;
+  }
+
+  .VPDoc .content {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .VPContent.is-mobile .content {
+    padding: 0 16px;
+  }
 }
 
 /* 超链接下划线 */
@@ -43,7 +88,6 @@
   /* 给的值是21，但是实测盖不住，直接999 */
 }
 
-
 /* VPFeatures 页卡悬浮效果 */
 .VPFeatures .items .item {
   transition: transform 0.3s;
@@ -53,16 +97,15 @@
   transform: translateY(-5px);
 }
 
-
 /* 代码组中添加图片 */
 .rendered-md img {
   max-width: 100%;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .rendered-md {
-  display: none;  /* 默认隐藏 */
+  display: none; /* 默认隐藏 */
 }
 
 .rendered-md.active {

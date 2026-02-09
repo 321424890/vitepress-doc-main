@@ -8,7 +8,8 @@
   }
   .content-container,
   .content {
-    max-width: 100% !important;
+    /* max-width: 100% !important; */
+    width: 900px !important;
   }
 
   /* aside 样式 */
@@ -35,8 +36,8 @@
     margin-top: 24px;
   }
 
-  .medium-zoom-overlay,.medium-zoom-image {
+  .medium-zoom-overlay,
+  .medium-zoom-image {
     z-index: 0 !important;
   }
-
 }

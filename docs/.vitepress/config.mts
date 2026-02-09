@@ -352,7 +352,7 @@ export default defineConfig({
       alias: {
         "@": pathResolve("../../src"),
         "@build": pathResolve("../../build"),
-        // 使用用户指定的crystal-ui路径配置
+        // 使用用户指定的crystalplus-ui路径配置
         "crystalplus-ui": pathResolve("../../../element-plus-wrapper/packages/crystal-ui/src/index.ts")
       }
     }
@@ -443,29 +443,46 @@ export default defineConfig({
           items: [
             { text: '输入框', link: '/components/basic/input' },
             { text: '数字输入框', link: '/components/basic/input/inputnumber' },
-            { text: 'select选择器', link: '/components/basic/select' },
+            { text: '复选框', link: '/components/basic/checkbox' },
+            { text: '复选框组', link: '/components/basic/checkbox-group' },
+            { text: '单选框', link: '/components/basic/radio' },
+            { text: '单选框组', link: '/components/basic/radio-group' },
+            { text: '开关', link: '/components/basic/switch' },
+            { text: '选择器', link: '/components/basic/select' },
             { text: '日期选择', link: '/components/basic/date-picker' },
             { text: '时间选择器', link: '/components/basic/time-picker' },
             { text: '时间点选择', link: '/components/basic/time-select' },
+            { text: '日历', link: '/components/basic/calendar' },
+            { text: '图片上传', link: '/components/basic/image' },
+           
             { text: '树选择', link: '/components/basic/tree-select' },
+            { text: '树形组件', link: '/components/basic/tree' },
+            { text: '级联选择器', link: '/components/basic/cascader' },
+             { text: 'From表单', link: '/components/basic/form-wrapper' },
+            { text: '搜索表单', link: '/components/basic/search-form' },
           ],
         },
         {
           text: '布局组件',
           collapsed: false,
           items: [
-            { text: '容器', link: '/components/container' },
-            { text: '网格', link: '/components/grid' },
-            { text: '空间', link: '/components/space' },
+            // { text: '容器', link: '/components/container' },
+            // { text: '网格', link: '/components/grid' },
+            // { text: '空间', link: '/components/space' },
+            { text: 'Table表格', link: '/components/basic/table' },
+            { text: 'FormGroup表单组', link: '/components/basic/form-group' },
           ],
         },
         {
           text: '反馈组件',
           collapsed: false,
           items: [
-            { text: '对话框', link: '/components/dialog' },
-            { text: '消息提示', link: '/components/message' },
-            { text: '通知', link: '/components/notification' },
+            { text: 'dialog对话框', link: '/components/basic/dialog' },
+            { text: 'drawer抽屉', link: '/components/basic/drawer' },
+            { text: 'message消息提示', link: '/components/basic/message' },
+            { text: 'modal模态框', link: '/components/basic/modal' },
+            { text: 'alert警告', link: '/components/basic/alert' },
+            { text: 'notify通知', link: '/components/basic/notify' },
             { text: '加载', link: '/components/loading' },
           ],
         },

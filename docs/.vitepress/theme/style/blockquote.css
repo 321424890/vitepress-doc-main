@@ -1,8 +1,36 @@
 /* .vitepress\theme\style\blockquote.css */
+/* 引用样式 */
 .vp-doc blockquote {
-    border-radius: 10px;
-    padding: 18px 20px 20px 15px;
-    position: relative;
-    background-color: var(--vp-c-gray-soft);
-    border-left: 6px solid var(--vp-c-green-2);
+  border-radius: 10px;
+  padding: 18px 20px 20px 15px;
+  position: relative;
+  background-color: var(--vp-c-gray-soft);
+  border-left: 6px solid var(--vp-c-green-2);
+}
+
+/* 表格样式 - 确保覆盖默认样式 */
+:root {
+  --vp-custom-table-margin: 0 auto;
+}
+
+/* 增加选择器优先级 */
+.vp-doc table {
+  margin: 20px 0 !important;
+}
+
+/* 移除默认的表格边距 */
+.vp-doc :is(table, .el-table, .el-table__inner-wrapper) {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.el-table .cell {
+  box-sizing: border-box;
+  line-height: 23px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  padding: 0 12px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: flex !important;
+  align-items: center !important;
 }
