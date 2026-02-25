@@ -105,6 +105,12 @@ import { CrystalIcon } from 'crystalplus-ui'
   border-radius: 8px;
 }
 
+/* 黑暗模式下的样式 */
+.dark .icon-demo {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+}
+
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);

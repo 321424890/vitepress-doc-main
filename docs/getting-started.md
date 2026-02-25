@@ -139,20 +139,20 @@ export default defineConfig({
 
 ### 3. 开发流程
 
-1.
- **启动 crystalplus UI 开发环境**：
-   ```bash
-   cd element-plus-wrapper
-   pnpm install
-   pnpm dev
-   ```
+1.  **启动 crystalplus UI 开发环境**：
 
-2. **启动您的项目**：
-   ```bash
-   cd your-project
-   pnpm install
-   pnpm dev
-   ```
+    ```bash
+    cd element-plus-wrapper
+    pnpm install
+    pnpm dev
+    ```
+
+2.  **启动您的项目**：
+    ```bash
+    cd your-project
+    pnpm install
+    pnpm dev
+    ```
 
 ## 🎯 快速示例
 
@@ -162,7 +162,7 @@ export default defineConfig({
 <template>
   <div class="demo-container">
     <h3>基础组件示例</h3>
-    
+
     <!-- 按钮组件 -->
     <div class="demo-section">
       <h4>按钮</h4>
@@ -171,7 +171,7 @@ export default defineConfig({
       <CrystalButton type="warning">警告按钮</CrystalButton>
       <CrystalButton type="danger">危险按钮</CrystalButton>
     </div>
-    
+
     <!-- 输入框组件 -->
     <div class="demo-section">
       <h4>输入框</h4>
@@ -222,9 +222,9 @@ import { CrystalButton, CrystalInput } from "crystalplus-ui";
 <template>
   <div class="demo-container">
     <h3>表格组件示例</h3>
-    
-    <CrystalTable 
-      :data="tableData" 
+
+    <CrystalTable
+      :data="tableData"
       :columns="columns"
       :selection="true"
       :actions="actions"
@@ -241,7 +241,7 @@ import { CrystalTable } from "crystalplus-ui";
 const tableData = ref([
   { id: 1, name: "张三", age: 28, email: "zhangsan@example.com" },
   { id: 2, name: "李四", age: 32, email: "lisi@example.com" },
-  { id: 3, name: "王五", age: 25, email: "wangwu@example.com" }
+  { id: 3, name: "王五", age: 25, email: "wangwu@example.com" },
 ]);
 
 // 列配置
@@ -249,7 +249,7 @@ const columns = ref([
   { prop: "id", label: "ID", width: 80 },
   { prop: "name", label: "姓名" },
   { prop: "age", label: "年龄", width: 80 },
-  { prop: "email", label: "邮箱" }
+  { prop: "email", label: "邮箱" },
 ]);
 
 // 操作按钮
@@ -260,7 +260,7 @@ const actions = ref([
     size: "small",
     handle: (row: any) => {
       console.log("编辑:", row);
-    }
+    },
   },
   {
     label: "删除",
@@ -268,8 +268,8 @@ const actions = ref([
     size: "small",
     handle: (row: any) => {
       console.log("删除:", row);
-    }
-  }
+    },
+  },
 ]);
 
 // 选择事件
@@ -299,6 +299,7 @@ const handleSelectionChange = (rows: any[]) => {
 ### Q: 为什么组件没有样式？
 
 **A:** 请确保您已经正确导入了样式文件：
+
 ```typescript
 import "element-plus/dist/index.css";
 import "crystalplus-ui/dist/index.css";
@@ -307,34 +308,17 @@ import "crystalplus-ui/dist/index.css";
 ### Q: 如何自定义组件样式？
 
 **A:** 您可以通过以下方式自定义样式：
+
 1. **CSS 变量**：覆盖 Element Plus 的 CSS 变量
 2. **深度选择器**：使用 `:deep()` 选择器修改组件内部样式
 3. **主题定制**：参考 Element Plus 的主题定制文档
-
-### Q: 组件不显示或报错怎么办？
-
-**A:** 请检查：
-1. 是否正确安装了所有依赖
-2. 是否正确导入了组件
-3. 是否符合 Vue 3 的语法要求
-4. 浏览器控制台是否有错误信息
-
-### Q: 如何贡献代码？
-
-**A:** 欢迎贡献代码！请按照以下步骤：
-1. Fork 仓库
-2. 创建特性分支
-3. 提交更改
-4. 推送到分支
-5. 打开 Pull Request
 
 ## 📞 支持与反馈
 
 如果您在使用过程中遇到任何问题，或有任何建议，欢迎通过以下方式联系我们：
 
-- **GitHub Issues**：[提交问题](https://github.com/yourusername/crystalplus-ui/issues)
-- **邮箱**：contact@crystalplus-ui.com
-- **社区**：加入我们的开发者社区
+- **GitHub**：[项目仓库](https://github.com/321424890/vitepress-doc-main)
+- **邮箱**：13054397571m@sina.cn
 
 ---
 

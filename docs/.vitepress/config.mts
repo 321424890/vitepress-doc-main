@@ -343,7 +343,8 @@ export default defineConfig({
       [MermaidPlugin()]
     ]as any,
     optimizeDeps: {
-      include: ['mermaid'],
+      include: ['mermaid', 'echarts'],
+      exclude: ['wangeditor'],
     },
     ssr: {
       noExternal: ['mermaid'],
@@ -409,11 +410,18 @@ export default defineConfig({
             // 分组标题3
             text: '进阶玩法',
             items: [
-              { text: 'Markdown', link: '/markdown' },
-              { text: '多语言', link: '/multi-language' },
-              { text: '静态部署', link: '/assets' },
-              { text: '插件', link: '/plugin' },
-              { text: '更新及卸载', link: '/update' },
+              // { text: 'Markdown', link: '/markdown' },
+              // { text: '多语言', link: '/multi-language' },
+              // { text: '静态部署', link: '/assets' },
+              // { text: '插件', link: '/plugin' },
+              // { text: '更新及卸载', link: '/update' },
+            ],
+          },
+          {
+            // 分组标题4
+            text: '案例展示',
+            items: [
+              { text: 'crystalplus UI案例', link: '/cases' },
             ],
           },
         ],
@@ -454,7 +462,8 @@ export default defineConfig({
             { text: '时间点选择', link: '/components/basic/time-select' },
             { text: '日历', link: '/components/basic/calendar' },
             { text: '图片上传', link: '/components/basic/image' },
-           
+            { text: '富文本编辑器', link: '/components/basic/editor' },
+            
             { text: '树选择', link: '/components/basic/tree-select' },
             { text: '树形组件', link: '/components/basic/tree' },
             { text: '级联选择器', link: '/components/basic/cascader' },
@@ -471,6 +480,7 @@ export default defineConfig({
             // { text: '空间', link: '/components/space' },
             { text: 'Table表格', link: '/components/basic/table' },
             { text: 'FormGroup表单组', link: '/components/basic/form-group' },
+            { text: '卡片组件', link: '/components/basic/card' },
           ],
         },
         {
@@ -505,26 +515,33 @@ export default defineConfig({
             { text: '快速上手', link: '/getting-started' },
           ],
         },
-        {
-          //分组标题3
-          text: '进阶玩法',
-          collapsed: false,
-          items: [
-            { text: 'Markdown', link: '/markdown' },
-            { text: '多语言', link: '/multi-language' },
-            { text: '静态部署', link: '/assets' },
-            { text: '插件', link: '/plugin' },
-            { text: '更新及卸载', link: '/update' },
-          ],
-        },
+        // {
+        //   //分组标题3
+        //   text: '进阶玩法',
+        //   collapsed: false,
+        //   items: [
+        //     { text: 'Markdown', link: '/markdown' },
+        //     { text: '多语言', link: '/multi-language' },
+        //     { text: '静态部署', link: '/assets' },
+        //     { text: '插件', link: '/plugin' },
+        //     { text: '更新及卸载', link: '/update' },
+        //   ],
+        // },
         {
           //分组标题3
           text: '其他站点',
           collapsed: false,
           items: [
             { text: 'VuePress', link: 'https://vuepress.yiov.top/' },
-            { text: '劝学录教程', link: 'https://yiov.top/' },
-            { text: '个人主页', link: 'https://yingyayi.com/' },
+            { text: 'crystalplusUI案例BL_Vue3_Admin项目', link: 'https://yiov.top/' },
+            { text: 'BL_Vue3_Admin代码仓库', link: 'https://github.com/321424890/BL_Vue3_Admin' },
+            { text: 'BL_Vue3_Admin开发指南', link: '/development-guide' },
+            { text: 'BL_Vue3_Admin配置', link: '/config-guide' },
+            { text: 'BL_Vue3_Admin路由', link: '/router-guide' },
+            { text: 'BL_Vue3_Admin样式', link: '/style-guide' },
+            { text: 'BL_Vue3_Admin请求', link: '/request-guide' },
+            { text: 'BL_Vue3_Admin目录  ', link: '/directory-structure' },
+            { text: 'BL_Vue3_Admin构建', link: '/build-guide' },
           ],
         },
       ],

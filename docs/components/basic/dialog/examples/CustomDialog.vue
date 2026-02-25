@@ -123,4 +123,6 @@ const dialogVisibleCustomStyle = ref(false);
 :deep(.custom-style-dialog .el-dialog__body) {
   padding: 24px;
 }
+
+
 </style>

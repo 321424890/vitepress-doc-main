@@ -89,4 +89,30 @@ const handleClose = () => {
 :deep(.el-alert) {
   margin-bottom: 10px;
 }
+
+/* 深色主题样式 */
+html.dark .input-group {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark .page-title {
+  color: #e0e0e0;
+}
+
+html.dark .page-description {
+  color: #b0b0b0;
+}
+
+html.dark .input-group h4 {
+  color: #e0e0e0;
+}
+
+html.dark .input-group p {
+  color: #b0b0b0;
+}
+
+html.dark .page-header {
+  border-bottom-color: #333;
+}
 </style>

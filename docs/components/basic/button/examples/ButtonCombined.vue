@@ -27,4 +27,12 @@ import { CrystalButton } from 'crystalplus-ui'
   flex-wrap: wrap;
   gap: 12px;
 }
+
+html.dark .button-group {
+  background-color: transparent;
+}
+
+html.dark .button-group > div {
+  background-color: transparent;
+}
 </style>

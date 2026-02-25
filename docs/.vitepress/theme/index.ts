@@ -3,6 +3,8 @@ import DefaultTheme from 'vitepress/theme'
 // Element Plus 语言设置
 import ElementPlus from 'element-plus'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+// Element Plus 暗黑模式样式
+import 'element-plus/theme-chalk/dark/css-vars.css'
 
 // giscusTalk
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';

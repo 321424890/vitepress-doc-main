@@ -52,6 +52,20 @@ import { Search, Edit, Check, Message, Star, Delete, Pointer, ArrowRight, Warnin
   flex-wrap: wrap;
   gap: 12px;
 }
+
+.demo-section {
+  margin-bottom: 20px;
+}
+
+.h3 {
+  margin-bottom: 12px;
+}
+
+.icon-button-group {
+  display: flex;
+  gap: 12px;
+}
+
 :deep(.el-button.is-circle) {
   border-radius: 50%;
   padding: 8px;
@@ -60,5 +74,15 @@ import { Search, Edit, Check, Message, Star, Delete, Pointer, ArrowRight, Warnin
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+}
+
+html.dark .button-group,
+html.dark .demo-section,
+html.dark .icon-button-group {
+  background-color: transparent;
+}
+
+html.dark h3 {
+  color: #fff;
 }
 </style>

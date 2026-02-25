@@ -8,10 +8,546 @@
   --vp-layout-max-width: 1400px;
 }
 
-.dark {
+html.dark {
   --vp-c-brand-1: #3dd68c;
   --vp-c-brand-2: #30a46c;
   --vp-c-brand-3: #298459;
+
+  /* 确保所有元素在黑暗模式下使用深色背景 */
+  --el-bg-color: #1a1a1a;
+  --el-bg-color-page: #121212;
+  --el-bg-color-overlay: #242424;
+  --el-text-color-primary: #ffffff;
+  --el-text-color-regular: #e5e5e5;
+  --el-text-color-secondary: #a0a0a0;
+  --el-border-color: #333333;
+  --el-border-color-light: #444444;
+  --el-border-color-lighter: #555555;
+  --el-fill-color: #242424;
+  --el-fill-color-light: #333333;
+  --el-fill-color-lighter: #444444;
+  --el-fill-color-blank: #1a1a1a;
+}
+
+/* 黑暗模式下的通用样式调整 */
+html.dark {
+  background-color: #121212;
+  color: #e5e5e5;
+}
+
+/* 确保卡片、容器等元素在黑暗模式下使用深色背景 */
+html.dark .input-group,
+html.dark .form-container,
+html.dark .el-card,
+html.dark .el-form-item,
+html.dark .el-table,
+html.dark .el-select-dropdown,
+html.dark .el-dialog,
+html.dark .el-popover,
+html.dark .el-tooltip__popper,
+html.dark .demo-container,
+html.dark .demo-section,
+html.dark .demo-card,
+html.dark .demo-content,
+html.dark .button-group,
+html.dark .cascader-group,
+html.dark .checkbox-group-basic-demo,
+html.dark .checkbox-group-advanced-demo,
+html.dark .drawer-content,
+html.dark .form-wrapper,
+html.dark .icon-button-group,
+html.dark .nested-group,
+html.dark .sub-checkbox-group,
+html.dark .sub-group {
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+  color: #e5e5e5 !important;
+}
+
+/* 确保表格相关元素在黑暗模式下正确显示 */
+html.dark .el-table__header-wrapper,
+html.dark .el-table__body-wrapper,
+html.dark .el-table__footer-wrapper {
+  background-color: #1a1a1a !important;
+}
+
+html.dark .el-table th,
+html.dark .el-table td {
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+  color: #e5e5e5 !important;
+}
+
+html.dark .el-table__empty-block {
+  background-color: #1a1a1a !important;
+  color: #a0a0a0 !important;
+}
+
+/* 确保表单元素在黑暗模式下正确显示 */
+html.dark .el-input__wrapper,
+html.dark .el-select__wrapper,
+html.dark .el-textarea,
+html.dark .el-date-editor .el-input__wrapper,
+html.dark .el-input-number .el-input__wrapper {
+  background-color: #242424 !important;
+  border-color: #333333 !important;
+  color: #e5e5e5 !important;
+}
+
+/* 确保数字输入框在黑暗模式下正确显示 */
+html.dark .el-input-number {
+  background-color: #242424 !important;
+  border-color: #333333 !important;
+}
+
+html.dark .el-input-number__decrease,
+html.dark .el-input-number__increase {
+  background-color: #242424 !important;
+  border-color: #333333 !important;
+  color: #e5e5e5 !important;
+}
+
+html.dark .el-input-number__decrease:hover,
+html.dark .el-input-number__increase:hover {
+  background-color: #333333 !important;
+}
+
+html.dark .el-input-number__decrease.is-disabled,
+html.dark .el-input-number__increase.is-disabled {
+  background-color: #242424 !important;
+  border-color: #333333 !important;
+  color: #999999 !important;
+}
+
+html.dark .el-input__placeholder,
+html.dark .el-select__placeholder,
+html.dark .el-textarea__placeholder {
+  color: #a0a0a0 !important;
+}
+
+html.dark .el-input__inner,
+html.dark .el-textarea__inner {
+  color: #e5e5e5 !important;
+}
+
+/* 确保按钮在黑暗模式下正确显示 */
+html.dark .el-button {
+  border-color: #333333 !important;
+}
+
+html.dark .el-button--primary {
+  background-color: #3dd68c !important;
+  border-color: #3dd68c !important;
+  color: #121212 !important;
+}
+
+/* 确保弹窗、下拉菜单等在黑暗模式下正确显示 */
+html.dark .el-dialog__header,
+html.dark .el-dialog__body,
+html.dark .el-dialog__footer {
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+  color: #e5e5e5 !important;
+}
+
+html.dark .el-dropdown-menu {
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+}
+
+html.dark .el-dropdown-menu__item {
+  color: #e5e5e5 !important;
+}
+
+html.dark .el-dropdown-menu__item:hover {
+  background-color: #333333 !important;
+}
+
+/* 确保选择器在黑暗模式下正确显示 */
+html.dark .el-select__caret {
+  color: #999 !important;
+}
+
+html.dark .el-select-dropdown {
+  background-color: #1f1f1f !important;
+  border-color: #333 !important;
+}
+
+html.dark .el-select-dropdown__item {
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-select-dropdown__item:hover {
+  background-color: #333 !important;
+}
+
+/* 确保选择器选项在黑暗模式下正确显示 */
+html.dark .el-select-dropdown__item {
+  background-color: #1f1f1f !important;
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-select-dropdown__item.is-highlighted {
+  background-color: #333 !important;
+}
+
+html.dark .el-select-dropdown__item.is-disabled {
+  color: #999 !important;
+}
+
+/* 确保选择器下拉菜单在黑暗模式下正确显示 */
+html.dark .el-select-dropdown {
+  background-color: #1f1f1f !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 确保选择器输入框在黑暗模式下正确显示 */
+html.dark .el-select {
+  background-color: #242424 !important;
+}
+
+html.dark .el-select .el-input__wrapper {
+  background-color: #242424 !important;
+  border-color: #333 !important;
+}
+
+html.dark .el-select .el-input__inner {
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-select .el-input__placeholder {
+  color: #999 !important;
+}
+
+/* 确保选择器下拉菜单的容器在黑暗模式下正确显示 */
+html.dark .el-popper {
+  background-color: #1f1f1f !important;
+  border: 1px solid #333 !important;
+}
+
+/* 确保选择器下拉菜单的内容在黑暗模式下正确显示 */
+html.dark .el-select-dropdown__wrap {
+  background-color: #1f1f1f !important;
+}
+
+/* 确保选择器下拉菜单的空状态在黑暗模式下正确显示 */
+html.dark .el-select-dropdown__empty {
+  background-color: #1f1f1f !important;
+  color: #999 !important;
+}
+
+/* 确保选择器分组标题在黑暗模式下正确显示 */
+html.dark .el-select-dropdown__item_group {
+  background-color: #1f1f1f !important;
+}
+
+html.dark .el-select-dropdown__item_group__title {
+  color: #999 !important;
+}
+
+/* 确保自定义选择器样式在黑暗模式下正确显示 */
+html.dark .custom-style-select {
+  background-color: #1f1f1f !important;
+  border-color: #333 !important;
+}
+
+html.dark .custom-style-select .el-select__wrapper {
+  background-color: #242424 !important;
+  border-color: #333 !important;
+}
+
+/* 确保选择器在黑暗模式下的所有状态都正确显示 */
+html.dark :deep(.el-select) {
+  background-color: #242424 !important;
+}
+
+html.dark :deep(.el-select__wrapper) {
+  background-color: #242424 !important;
+  border-color: #333 !important;
+}
+
+html.dark :deep(.el-select-dropdown) {
+  background-color: #1f1f1f !important;
+  border-color: #333 !important;
+}
+
+html.dark :deep(.el-select-dropdown__item) {
+  background-color: #1f1f1f !important;
+  color: #e0e0e0 !important;
+}
+
+html.dark :deep(.el-select-dropdown__item:hover) {
+  background-color: #333 !important;
+}
+
+html.dark :deep(.el-select-dropdown__item.is-highlighted) {
+  background-color: #333 !important;
+}
+
+/* 确保复选框在黑暗模式下正确显示 */
+html.dark .el-checkbox__label {
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-checkbox__input .el-checkbox__inner {
+  background-color: #333 !important;
+  border-color: #555 !important;
+}
+
+html.dark .el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #409eff !important;
+  border-color: #409eff !important;
+}
+
+html.dark .el-checkbox__input.is-disabled .el-checkbox__inner {
+  background-color: #333 !important;
+  border-color: #555 !important;
+}
+
+html.dark .el-checkbox__input.is-disabled .el-checkbox__label {
+  color: #999 !important;
+}
+
+/* 确保单选按钮在黑暗模式下正确显示 */
+html.dark .el-radio__label {
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-radio__input .el-radio__inner {
+  background-color: #333 !important;
+  border-color: #555 !important;
+}
+
+html.dark .el-radio__input.is-checked .el-radio__inner {
+  background-color: #409eff !important;
+  border-color: #409eff !important;
+}
+
+/* 确保开关在黑暗模式下正确显示 */
+html.dark .el-switch__core {
+  background-color: #333 !important;
+  border-color: #555 !important;
+}
+
+html.dark .el-switch__core.is-checked {
+  background-color: #409eff !important;
+  border-color: #409eff !important;
+}
+
+/* 确保级联选择器在黑暗模式下正确显示 */
+html.dark .el-cascader__wrapper {
+  background-color: #1f1f1f !important;
+  border-color: #333 !important;
+}
+
+html.dark .el-cascader__label {
+  color: #fff !important;
+}
+
+html.dark .el-cascader__placeholder {
+  color: #999 !important;
+}
+
+html.dark .el-cascader__dropdown {
+  background-color: #1f1f1f !important;
+  border-color: #333 !important;
+}
+
+html.dark .el-cascader-menu {
+  background-color: #1f1f1f !important;
+}
+
+html.dark .el-cascader-node {
+  color: #fff !important;
+}
+
+html.dark .el-cascader-node.is-active {
+  color: #409eff !important;
+}
+
+html.dark .el-cascader-node.is-disabled {
+  color: #999 !important;
+}
+
+html.dark .el-cascader-node__postfix {
+  color: #999 !important;
+}
+
+/* 确保抽屉在黑暗模式下正确显示 */
+html.dark .el-drawer {
+  background-color: #1f1f1f !important;
+  border-left: 1px solid #333 !important;
+}
+
+html.dark .el-drawer__header {
+  background-color: #1f1f1f !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+html.dark .el-drawer__title {
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-drawer__body {
+  background-color: #1f1f1f !important;
+}
+
+html.dark .el-drawer__footer {
+  background-color: #1f1f1f !important;
+  border-top: 1px solid #333 !important;
+}
+
+/* 确保菜单在黑暗模式下正确显示 */
+html.dark .el-menu {
+  background-color: #1f1f1f !important;
+  border-right: 1px solid #333 !important;
+}
+
+html.dark .el-menu-item {
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-menu-item:hover {
+  background-color: #333 !important;
+}
+
+html.dark .el-menu-item.is-active {
+  color: #409eff !important;
+  background-color: rgba(64, 158, 255, 0.1) !important;
+}
+
+html.dark .el-menu-item__icon {
+  color: #999 !important;
+}
+
+/* 确保卡片在黑暗模式下正确显示 */
+html.dark .el-card {
+  background-color: #2c2c2c !important;
+  border-color: #333 !important;
+}
+
+html.dark .el-card__header {
+  background-color: #2c2c2c !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+html.dark .el-card__header span {
+  color: #e0e0e0 !important;
+}
+
+html.dark .el-card__body {
+  background-color: #2c2c2c !important;
+}
+
+html.dark .el-card__body p {
+  color: #e0e0e0 !important;
+}
+
+/* 确保表单组在黑暗模式下正确显示 */
+html.dark .crystal-form-group {
+  background-color: transparent !important;
+}
+
+html.dark .crystal-form-group-title {
+  color: #e0e0e0 !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+/* 确保表单标签在黑暗模式下正确显示 */
+html.dark .el-form-item__label {
+  color: #e0e0e0 !important;
+}
+
+/* 确保结果展示区域在黑暗模式下正确显示 */
+html.dark .demo-result {
+  background-color: #2c2c2c !important;
+  border: 1px solid #333 !important;
+}
+
+html.dark .demo-result h4 {
+  color: #e0e0e0 !important;
+}
+
+html.dark pre {
+  background-color: #2c2c2c !important;
+  border-color: #333 !important;
+  color: #e0e0e0 !important;
+}
+
+/* 确保标题在黑暗模式下正确显示 */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: #e0e0e0 !important;
+}
+
+/* 确保段落文本在黑暗模式下正确显示 */
+html.dark p {
+  color: #e0e0e0 !important;
+}
+
+/* 左侧菜单黑暗主题样式 */
+html.dark .VPSidebar {
+  background-color: #1a1a1a !important;
+}
+
+html.dark .VPSidebar .text {
+  color: #ffffff !important;
+}
+
+html.dark .VPSidebar .items {
+  background-color: #1a1a1a !important;
+}
+
+html.dark .VPSidebar .item {
+  color: #ffffff !important;
+}
+
+html.dark .VPSidebar .item:hover {
+  color: #ffffff !important;
+  background-color: #333333 !important;
+}
+
+html.dark .VPSidebar .item.active {
+  color: #ffffff !important;
+  background-color: #333333 !important;
+}
+
+html.dark .VPSidebar .item .text {
+  color: #ffffff !important;
+}
+
+html.dark .VPSidebar .collapsible-title {
+  color: #ffffff !important;
+}
+
+html.dark .VPSidebar .collapsible-title:hover {
+  color: #ffffff !important;
+}
+
+/* 顶部导航栏黑暗主题样式 */
+html.dark .VPNavBar {
+  background-color: #1a1a1a !important;
+}
+
+html.dark .VPNavBar .text {
+  color: #ffffff !important;
+}
+
+html.dark .VPNavBar .title {
+  color: #ffffff !important;
+}
+
+html.dark .VPNavBar .item {
+  color: #ffffff !important;
+}
+
+html.dark .VPNavBar .item:hover {
+  color: #ffffff !important;
 }
 
 :root {
@@ -111,4 +647,848 @@
 .rendered-md.active {
   display: block; /* 只有在 active 状态下才显示 */
   max-width: 100%;
+}
+/* 深色主题样式 */
+html.dark .checkbox-basic-demo h3 {
+  color: #e0e0e0;
+}
+
+/* 深色主题样式 */
+html.dark .checkbox-advanced-demo h3 {
+  color: #e0e0e0;
+}
+
+html.dark .selected-values {
+  background: #2c2c2c;
+  color: #b0b0b0;
+}
+/* 深色主题样式 */
+html.dark .checkbox-group-advanced-demo {
+  background-color: transparent;
+}
+
+html.dark .checkbox-group-advanced-demo h3 {
+  color: #fff;
+}
+
+html.dark .checkbox-group-advanced-demo h4 {
+  color: #ccc;
+}
+
+html.dark .demo-section {
+  background: #1f1f1f;
+}
+
+html.dark .selected-values {
+  background: #2c2c2c;
+  color: #ccc;
+}
+
+html.dark .event-log {
+  background: #1a2e4a;
+  color: #409eff;
+}
+
+/* 自定义选项的深色主题样式 */
+html.dark .option-title {
+  color: #fff;
+}
+
+html.dark .option-desc {
+  color: #999;
+}
+
+/* 按钮的深色主题样式 */
+html.dark .add-btn,
+html.dark .remove-btn {
+  background: #333;
+  border-color: #555;
+  color: #fff;
+}
+
+html.dark .add-btn:hover {
+  color: #409eff;
+  border-color: #409eff;
+  background: rgba(64, 158, 255, 0.1);
+}
+
+html.dark .remove-btn:hover {
+  color: #f56c6c;
+  border-color: #f56c6c;
+  background: rgba(245, 108, 108, 0.1);
+}
+
+/* 深色主题下的复选框样式 */
+html.dark :deep(.el-checkbox__label) {
+  color: #fff;
+}
+
+html.dark :deep(.el-checkbox__input .el-checkbox__inner) {
+  background-color: #333;
+  border-color: #555;
+}
+
+html.dark :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
+  background-color: #409eff;
+  border-color: #409eff;
+}
+
+html.dark :deep(.el-checkbox__input.is-disabled .el-checkbox__inner) {
+  background-color: #333;
+  border-color: #555;
+}
+
+html.dark :deep(.el-checkbox__input.is-disabled .el-checkbox__label) {
+  color: #999;
+}
+
+/* 深色主题样式 */
+html.dark .demo-section {
+  background: #1f1f1f;
+}
+
+html.dark .selected-value {
+  background: #2c2c2c;
+  color: #b0b0b0;
+}
+
+html.dark .event-log {
+  background: #1a2e4a;
+  color: #91cfff;
+}
+
+html.dark .tip {
+  background: #2a3d2a;
+  color: #87ce87;
+}
+
+html.dark .radio-advanced-demo h3 {
+  color: #e0e0e0;
+}
+
+html.dark .radio-advanced-demo h4 {
+  color: #b0b0b0;
+}
+
+html.dark .radio-title {
+  color: #e0e0e0;
+}
+
+html.dark .radio-desc {
+  color: #999;
+}
+
+html.dark .add-btn,
+html.dark .remove-btn {
+  background: #2c2c2c;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+html.dark .add-btn:hover {
+  background: #1a2e4a;
+  border-color: #1890ff;
+}
+
+html.dark .remove-btn:hover {
+  background: #4a1a1a;
+  border-color: #f56c6c;
+}
+/* 深色主题样式 */
+html.dark .demo-section {
+  background: #1f1f1f;
+}
+
+html.dark .value-display {
+  background: #2c2c2c;
+  color: #b0b0b0;
+}
+
+html.dark .change-log {
+  background: #1a2e4a;
+  color: #91cfff;
+}
+
+html.dark .switch-item {
+  background: #2c2c2c;
+  border: 1px solid #444;
+}
+
+html.dark .switch-item span {
+  color: #e0e0e0;
+}
+
+html.dark .demo-section h4 {
+  color: #b0b0b0;
+}
+/* 黑暗模式下的样式 */
+html.dark .basic-select-demo h3 {
+  color: #e5e5e5;
+}
+
+html.dark .input-values {
+  background-color: #1a1a1a;
+  border-left-color: #3dd68c;
+}
+
+html.dark .input-values h4 {
+  color: #e5e5e5;
+}
+
+html.dark .input-values p {
+  color: #a0a0a0;
+}
+/* 黑暗模式下的样式 */
+html.dark .filterable-select-demo h3 {
+  color: #e5e5e5;
+}
+
+html.dark .input-values {
+  background-color: #1a1a1a;
+  border-left-color: #3dd68c;
+}
+
+html.dark .input-values h4 {
+  color: #e5e5e5;
+}
+
+html.dark .input-values p {
+  color: #a0a0a0;
+}
+/* 黑暗模式下的样式 */
+html.dark .date-picker-demo {
+  background-color: #1a1a1a;
+  border-color: #333333;
+}
+
+html.dark .date-picker-demo h4 {
+  color: #e5e5e5;
+}
+
+html.dark .date-picker-demo p {
+  color: #a0a0a0;
+}
+
+html.dark .value-display h4 {
+  color: #e5e5e5;
+}
+
+html.dark .value-display p {
+  color: #a0a0a0;
+}
+/* 深色主题样式 */
+html.dark .time-picker-demo {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+html.dark h4 {
+  color: #e0e0e0;
+}
+
+html.dark p {
+  color: #b0b0b0;
+}
+/* 深色主题样式 */
+html.dark .time-select-demo {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+html.dark h4 {
+  color: #e0e0e0;
+}
+
+html.dark p {
+  color: #b0b0b0;
+}
+
+/* 无颜色样式的深色主题适配 */
+html.dark .no-color-select {
+  :deep(.el-input__wrapper) {
+    border-color: #444 !important;
+    background-color: #2c2c2c !important;
+  }
+
+  :deep(.el-input__wrapper:hover) {
+    border-color: #555 !important;
+  }
+
+  :deep(.el-input__wrapper.is-focus) {
+    border-color: #444 !important;
+  }
+
+  :deep(.el-input__inner) {
+    color: #e0e0e0 !important;
+  }
+
+  :deep(.el-time-select__item) {
+    color: #e0e0e0 !important;
+  }
+
+  :deep(.el-time-select__item:hover) {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+  }
+
+  :deep(.el-time-select__item.selected) {
+    background-color: #444 !important;
+    color: #e0e0e0 !important;
+  }
+}
+/* 深色主题样式 */
+html.dark .time-select-demo {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+html.dark h4 {
+  color: #e0e0e0;
+}
+
+html.dark p {
+  color: #b0b0b0;
+}
+/* 深色主题样式 */
+html.dark .section-title {
+  color: #e0e0e0;
+}
+
+html.dark .demo-card {
+  background: #1f1f1f;
+  border: 1px solid #333;
+}
+
+html.dark .card-title {
+  color: #e0e0e0;
+}
+
+html.dark .card-desc {
+  color: #b0b0b0;
+}
+
+html.dark .value-display {
+  background: #2c2c2c;
+  color: #b0b0b0;
+}
+
+/* 任务管理的深色主题适配 */
+html.dark .task-item {
+  background: #1a2e4a;
+}
+
+html.dark .task-time {
+  color: #b0b0b0;
+}
+/* 深色主题样式 */
+html.dark .demo-item {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark h3 {
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-upload__tip) {
+  color: #999;
+}
+
+html.dark :deep(.el-upload-dragger) {
+  border-color: #333;
+  background-color: #1f1f1f;
+}
+
+html.dark :deep(.el-upload-dragger:hover) {
+  border-color: #409eff;
+}
+
+html.dark :deep(.el-upload-dragger__text) {
+  color: #b0b0b0;
+}
+
+html.dark :deep(.el-icon-plus) {
+  color: #666;
+}
+
+html.dark :deep(.el-upload-list__item-name) {
+  color: #b0b0b0;
+}
+
+html.dark :deep(.el-upload-list__item-status-label) {
+  color: #999;
+}
+/* 深色主题样式 */
+html.dark .tree-select-demo {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+html.dark h4 {
+  color: #e0e0e0;
+}
+
+html.dark p {
+  color: #b0b0b0;
+}
+
+html.dark .value-display p {
+  color: #b0b0b0;
+}
+/* 深色主题样式 */
+html.dark .demo-section {
+  background: #1f1f1f;
+}
+
+html.dark .selected-value {
+  background: #2c2c2c;
+  color: #b0b0b0;
+}
+
+html.dark .tree-basic-demo h3 {
+  color: #e0e0e0;
+}
+
+html.dark .tree-basic-demo h4 {
+  color: #b0b0b0;
+}
+
+/* 树形结构的深色主题样式 */
+html.dark :deep(.el-tree-node__content:hover) {
+  background-color: #333;
+}
+
+html.dark :deep(.el-tree-node.is-current > .el-tree-node__content) {
+  background-color: #333;
+}
+
+html.dark :deep(.el-tree-node.is-selected > .el-tree-node__content) {
+  background-color: #333;
+}
+
+html.dark :deep(.el-tree) {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-checkbox__label) {
+  color: #e0e0e0;
+}
+
+/* 深色主题样式 */
+html.dark .cascader-search-demo {
+  background-color: transparent;
+}
+
+html.dark .cascader-group {
+  background-color: transparent;
+}
+
+html.dark .cascader-search-demo h3 {
+  color: #fff;
+}
+
+/* 深色主题下的级联选择器样式 */
+html.dark :deep(.el-cascader__wrapper) {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark :deep(.el-cascader__label) {
+  color: #fff;
+}
+
+html.dark :deep(.el-cascader__placeholder) {
+  color: #999;
+}
+
+html.dark :deep(.el-cascader__dropdown) {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark :deep(.el-cascader-menu) {
+  background-color: #1f1f1f;
+}
+
+html.dark :deep(.el-cascader-node) {
+  color: #fff;
+}
+
+html.dark :deep(.el-cascader-node.is-active) {
+  color: #409eff;
+}
+
+html.dark :deep(.el-cascader-node.is-disabled) {
+  color: #999;
+}
+
+html.dark :deep(.el-cascader-node__postfix) {
+  color: #999;
+}
+
+/* 搜索框样式 */
+html.dark :deep(.el-cascader-menu__item) {
+  color: #fff;
+}
+
+html.dark :deep(.el-cascader-menu__item.is-highlighted) {
+  background-color: #333;
+}
+
+html.dark :deep(.el-cascader-menu__item.is-disabled) {
+  color: #999;
+}
+/* 深色主题样式 */
+html.dark .demo-item {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark h3 {
+  color: #e0e0e0;
+}
+
+html.dark .form-result {
+  background-color: #2c2c2c;
+}
+
+html.dark .form-result h5 {
+  color: #e0e0e0;
+}
+
+html.dark .form-result pre {
+  background-color: #1a1a1a;
+  color: #b0b0b0;
+  border-color: #333;
+}
+
+html.dark .custom-slot-content {
+  color: #e0e0e0;
+}
+/* 深色主题样式 */
+html.dark .demo-item {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark h3 {
+  color: #e0e0e0;
+}
+
+html.dark .form-result {
+  background-color: #2c2c2c;
+}
+
+html.dark .form-result h5 {
+  color: #e0e0e0;
+}
+
+html.dark .form-result pre {
+  background-color: #1a1a1a;
+  color: #b0b0b0;
+  border-color: #333;
+}
+/* 深色主题样式 */
+html.dark .input-group {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark .page-title {
+  color: #e0e0e0;
+}
+
+html.dark .page-description {
+  color: #b0b0b0;
+}
+
+html.dark .input-group h4 {
+  color: #e0e0e0;
+}
+
+html.dark .input-group p {
+  color: #b0b0b0;
+}
+
+html.dark .page-header {
+  border-bottom-color: #333;
+}
+/* 深色主题样式 */
+html.dark .demo-container {
+  background-color: #1f1f1f;
+}
+
+html.dark .form-wrapper {
+  background-color: #1f1f1f;
+}
+
+html.dark h3 {
+  color: #e0e0e0;
+}
+
+html.dark .demo-result {
+  background-color: #2c2c2c;
+}
+
+html.dark .demo-result h4 {
+  color: #e0e0e0;
+}
+
+html.dark pre {
+  background-color: #2c2c2c;
+  border-color: #333;
+  color: #e0e0e0;
+}
+
+/* 深色主题下的表单样式 */
+html.dark :deep(.el-form-item__label) {
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-input__wrapper) {
+  background-color: #333;
+  border-color: #555;
+}
+
+html.dark :deep(.el-input__placeholder) {
+  color: #999;
+}
+
+html.dark :deep(.el-input__inner) {
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-select__wrapper) {
+  background-color: #333;
+  border-color: #555;
+}
+
+html.dark :deep(.el-select__placeholder) {
+  color: #999;
+}
+
+html.dark :deep(.el-select__caret) {
+  color: #999;
+}
+
+html.dark :deep(.el-select-dropdown) {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark :deep(.el-select-dropdown__item) {
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-select-dropdown__item:hover) {
+  background-color: #333;
+}
+
+html.dark :deep(.el-textarea__inner) {
+  background-color: #333;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-date-editor .el-input__wrapper) {
+  background-color: #333;
+  border-color: #555;
+}
+
+html.dark :deep(.el-date-editor .el-input__placeholder) {
+  color: #999;
+}
+
+/* 深色主题下的表格样式 */
+html.dark :deep(.el-table) {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark :deep(.el-table th) {
+  background-color: #2c2c2c;
+  border-bottom: 1px solid #333;
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-table td) {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-table__row:hover > td) {
+  background-color: #333;
+}
+
+/* 深色主题下的表单组样式 */
+html.dark :deep(.crystal-form-group) {
+  background-color: transparent;
+}
+
+html.dark :deep(.crystal-form-group-title) {
+  color: #e0e0e0;
+  border-bottom: 1px solid #333;
+}
+/* 深色主题样式 */
+html.dark .form-container {
+  background-color: #1a1a1a;
+}
+
+html.dark .form-data-preview {
+  background-color: #1f1f1f;
+}
+
+html.dark .form-data-preview h5 {
+  color: #e0e0e0;
+}
+
+html.dark .form-data-preview pre {
+  background-color: #2c2c2c;
+  color: #b0b0b0;
+}
+
+html.dark :deep(.crystal-form-group) {
+  background-color: #1f1f1f;
+}
+
+html.dark :deep(.crystal-form-group-title) {
+  color: #e0e0e0;
+  border-bottom-color: #333;
+}
+
+html.dark :deep(.el-form-item__label) {
+  color: #b0b0b0;
+}
+
+html.dark :deep(.el-table th) {
+  background-color: #2c2c2c;
+  border-bottom-color: #333;
+}
+
+html.dark :deep(.el-table td) {
+  border-bottom-color: #333;
+}
+
+html.dark :deep(.el-table) {
+  background-color: #1f1f1f;
+}
+
+html.dark :deep(.el-table__empty-block) {
+  background-color: #1f1f1f;
+}
+/* 深色主题样式 */
+html.dark .demo-container {
+  background-color: #1f1f1f;
+}
+
+html.dark .demo-container h4 {
+  color: #e0e0e0;
+}
+
+html.dark .dialog-content p {
+  color: #e0e0e0;
+}
+
+html.dark .custom-header-title {
+  color: #e0e0e0;
+}
+
+/* 深色主题下的卡片样式 */
+html.dark :deep(.el-card) {
+  background-color: #2c2c2c;
+  border-color: #333;
+}
+
+html.dark :deep(.el-card__header) {
+  background-color: #2c2c2c;
+  border-bottom: 1px solid #333;
+}
+
+html.dark :deep(.el-card__header span) {
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-card__body) {
+  background-color: #2c2c2c;
+}
+
+html.dark :deep(.el-card__body p) {
+  color: #e0e0e0;
+}
+
+/* 自定义样式弹窗的深色主题 */
+html.dark :deep(.custom-style-dialog) {
+  background-color: #1f1f1f;
+  border-color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+html.dark :deep(.custom-style-dialog .el-dialog__header) {
+  border-bottom: 1px solid #333;
+  background-color: #1f1f1f;
+}
+
+html.dark :deep(.custom-style-dialog .el-dialog__title) {
+  color: #e0e0e0;
+}
+
+html.dark :deep(.custom-style-dialog .el-dialog__body) {
+  background-color: #1f1f1f;
+}
+/* 深色主题样式 */
+html.dark .demo-container {
+  background-color: #1f1f1f;
+}
+
+html.dark .demo-container h4 {
+  color: #e0e0e0;
+}
+
+html.dark .dialog-content p {
+  color: #e0e0e0;
+}
+
+/* 深色主题下的表单样式 */
+html.dark :deep(.el-form-item__label) {
+  color: #e0e0e0;
+}
+
+html.dark :deep(.el-input__wrapper) {
+  background-color: #333;
+  border-color: #555;
+}
+
+html.dark :deep(.el-input__placeholder) {
+  color: #999;
+}
+
+html.dark :deep(.el-input__inner) {
+  color: #e0e0e0;
+}
+/* 深色主题样式 */
+html.dark .input-group {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+html.dark .page-title {
+  color: #e0e0e0;
+}
+
+html.dark .page-description {
+  color: #b0b0b0;
+}
+
+html.dark .input-group h4 {
+  color: #e0e0e0;
+}
+
+html.dark .input-group p {
+  color: #b0b0b0;
+}
+
+html.dark .page-header {
+  border-bottom-color: #333;
 }

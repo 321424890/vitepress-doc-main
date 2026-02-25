@@ -84,6 +84,21 @@ const borderColor4 = ref('')
   transition: all 0.3s ease;
 }
 
+/* 黑暗模式下的样式 */
+/* .dark .input-border-color-demo h3 {
+  color: #e5e5e5;
+}
+
+.dark .input-label {
+  color: #a0a0a0;
+}
+
+.dark .input-tip {
+  color: #a0a0a0;
+  background-color: #1a1a1a;
+  border-left-color: #3dd68c;
+} */
+
 
 
 

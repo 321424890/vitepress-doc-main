@@ -317,4 +317,6 @@ const handleDelete = (row) => {
 :deep(.el-table td) {
   border-bottom: 1px solid #ebeef5;
 }
+
+
 </style>

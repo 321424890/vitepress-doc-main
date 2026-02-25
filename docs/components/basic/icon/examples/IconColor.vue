@@ -59,4 +59,14 @@ import { CrystalIcon } from 'crystalplus-ui'
   font-size: 14px;
   color: #666;
 }
+
+/* 黑暗模式下的样式 */
+.dark .icon-demo {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+}
+
+.dark .icon-item span {
+  color: #a0a0a0;
+}
 </style>

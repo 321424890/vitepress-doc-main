@@ -63,4 +63,10 @@ import { CrystalIcon } from 'crystalplus-ui'
 .icon-grid .crystal-icon:hover {
   transform: scale(1.1);
 }
+
+/* 黑暗模式下的样式 */
+.dark .icon-demo {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+}
 </style>

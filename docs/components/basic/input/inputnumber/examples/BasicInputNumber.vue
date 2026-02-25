@@ -83,4 +83,22 @@ const value6 = ref(0)
   transition: all 0.3s ease;
 }
 
+/* 黑暗模式下的样式 */
+/* .dark .basic-input-number-demo h3 {
+  color: #e5e5e5;
+}
+
+.dark .input-values {
+  background-color: #1a1a1a;
+  border-left-color: #3dd68c;
+}
+
+.dark .input-values h4 {
+  color: #e5e5e5;
+}
+
+.dark .input-values p {
+  color: #a0a0a0;
+} */
+
 </style>

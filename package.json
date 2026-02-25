@@ -33,7 +33,9 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
+    "echarts": "^6.0.0",
     "element-plus": "^2.13.2",
-    "highlight.js": "^11.11.1"
+    "highlight.js": "^11.11.1",
+    "wangeditor": "^4.7.15"
   }
 }

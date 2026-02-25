@@ -122,4 +122,6 @@ const optionsWithIcons = [
 :deep(.el-select__wrapper.is-focus) {
   box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.2) !important;
 }
+
+
 </style>

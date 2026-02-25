@@ -17,7 +17,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: GitHub
-      link: https://github.com/yourusername
+      link: https://github.com/321424890/vitepress-doc-main
 
 features:
   - icon: 🎨

@@ -78,5 +78,13 @@ const inputValue7 = ref('')
   transition: all 0.3s ease;
 }
 
+/* .dark .advanced-input-demo h3 {
+  color: #e5e5e5;
+}
+
+.dark .size-group h4 {
+  color: #a0a0a0;
+} */
+
 
 </style>

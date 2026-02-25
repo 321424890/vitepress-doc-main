@@ -125,4 +125,5 @@ const highlightValue = ref('option1')
   border-radius: 50%;
   transition: all 0.3s ease;
 }
+
 </style>

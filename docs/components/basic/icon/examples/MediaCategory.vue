@@ -45,4 +45,16 @@ import { CrystalIcon } from 'crystalplus-ui'
   font-weight: 600;
   color: #303133;
 }
+
+/* 黑暗模式下的样式 */
+.dark .icon-category {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dark .icon-category h4 {
+  color: #e5e5e5;
+}
 </style>

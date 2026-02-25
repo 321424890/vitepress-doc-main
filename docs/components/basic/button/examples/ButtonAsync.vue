@@ -104,4 +104,12 @@ h3 {
   color: #333;
   width: 100%;
 }
+
+html.dark .button-group {
+  background-color: transparent;
+}
+
+html.dark h3 {
+  color: #fff;
+}
 </style>

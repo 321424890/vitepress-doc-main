@@ -21,43 +21,43 @@ CrystalSwitch 是基于 Element Plus 的 ElSwitch 组件封装的开关组件，
 components/basic/switch/examples/BasicSwitch.vue
 :::
 
-## 高级用法
+<!-- ## 高级用法
 
 ### 自定义功能和交互
 
 ::: demo
 components/basic/switch/examples/AdvancedSwitch.vue
-:::
+::: -->
 
 ## API
 
 ### 属性
 
-| 属性 | 类型 | 默认值 | 说明 |
-| ---- | ---- | ---- | ---- |
-| v-model | `boolean \| any` | `false` | 绑定值 |
-| disabled | `boolean` | `false` | 是否禁用 |
-| width | `number` | `40` | 开关宽度 |
-| active-text | `string` | - | 激活时的文本 |
-| inactive-text | `string` | - | 非激活时的文本 |
-| active-value | `any` | `true` | 激活时的值 |
-| inactive-value | `any` | `false` | 非激活时的值 |
-| name | `string` | - | 开关的 name 属性 |
-| border | `boolean` | `false` | 是否显示边框 |
-| before-change | `(val: boolean) => boolean \| Promise<boolean>` | - | 开关状态变更前的回调，返回 false 可以阻止变更 |
+| 属性           | 类型                                            | 默认值  | 说明                                          |
+| -------------- | ----------------------------------------------- | ------- | --------------------------------------------- |
+| v-model        | `boolean \| any`                                | `false` | 绑定值                                        |
+| disabled       | `boolean`                                       | `false` | 是否禁用                                      |
+| width          | `number`                                        | `40`    | 开关宽度                                      |
+| active-text    | `string`                                        | -       | 激活时的文本                                  |
+| inactive-text  | `string`                                        | -       | 非激活时的文本                                |
+| active-value   | `any`                                           | `true`  | 激活时的值                                    |
+| inactive-value | `any`                                           | `false` | 非激活时的值                                  |
+| name           | `string`                                        | -       | 开关的 name 属性                              |
+| border         | `boolean`                                       | `false` | 是否显示边框                                  |
+| before-change  | `(val: boolean) => boolean \| Promise<boolean>` | -       | 开关状态变更前的回调，返回 false 可以阻止变更 |
 
 ### 事件
 
-| 事件名 | 说明 | 参数 |
-| ---- | ---- | ---- |
-| update:modelValue | 绑定值更新时触发 | `value: boolean \| any` |
-| change | 开关状态变更时触发 | `value: boolean \| any` |
+| 事件名            | 说明               | 参数                    |
+| ----------------- | ------------------ | ----------------------- |
+| update:modelValue | 绑定值更新时触发   | `value: boolean \| any` |
+| change            | 开关状态变更时触发 | `value: boolean \| any` |
 
 ### 插槽
 
-| 插槽名 | 说明 |
-| ---- | ---- |
-| active-icon | 激活时的图标 |
+| 插槽名        | 说明           |
+| ------------- | -------------- |
+| active-icon   | 激活时的图标   |
 | inactive-icon | 非激活时的图标 |
 
 ## 注意事项
@@ -78,18 +78,18 @@ components/basic/switch/examples/AdvancedSwitch.vue
 
 ```vue
 <template>
-  <CrystalSwitch 
-    v-model="value" 
-    :active-value="'开启'" 
-    :inactive-value="'关闭'" 
+  <CrystalSwitch
+    v-model="value"
+    :active-value="'开启'"
+    :inactive-value="'关闭'"
   />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { CrystalSwitch } from 'crystal-ui'
+import { ref } from "vue";
+import { CrystalSwitch } from "crystal-ui";
 
-const value = ref('关闭')
+const value = ref("关闭");
 </script>
 ```
 
@@ -99,30 +99,27 @@ const value = ref('关闭')
 
 ```vue
 <template>
-  <CrystalSwitch 
-    v-model="value" 
-    :before-change="handleBeforeChange" 
-  />
+  <CrystalSwitch v-model="value" :before-change="handleBeforeChange" />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { CrystalSwitch } from 'crystal-ui'
-import { ElMessageBox } from 'element-plus'
+import { ref } from "vue";
+import { CrystalSwitch } from "crystal-ui";
+import { ElMessageBox } from "element-plus";
 
-const value = ref(false)
+const value = ref(false);
 
 const handleBeforeChange = async (val) => {
   try {
     await ElMessageBox.confirm(
-      `确定要${val ? '开启' : '关闭'}吗？`,
-      '操作确认'
-    )
-    return true
+      `确定要${val ? "开启" : "关闭"}吗？`,
+      "操作确认",
+    );
+    return true;
   } catch {
-    return false
+    return false;
   }
-}
+};
 </script>
 ```
 
@@ -143,10 +140,10 @@ const handleBeforeChange = async (val) => {
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { CrystalSwitch } from 'crystal-ui'
-import { ElIcon, Check, Close } from 'element-plus'
+import { ref } from "vue";
+import { CrystalSwitch } from "crystal-ui";
+import { ElIcon, Check, Close } from "element-plus";
 
-const value = ref(false)
+const value = ref(false);
 </script>
 ```

@@ -48,5 +48,10 @@ const inputValue5 = ref('')
   transition: all 0.3s ease;
 }
 
+/* 黑暗模式下的样式 */
+/* .dark .basic-input-demo h3 {
+  color: #e5e5e5;
+} */
+
 
 </style>

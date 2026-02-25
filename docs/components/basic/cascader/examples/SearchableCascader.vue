@@ -192,4 +192,5 @@ const partialDisabledValue = ref([])
   border-radius: 6px;
   transition: all 0.3s ease;
 }
+
 </style>

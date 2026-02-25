@@ -18,4 +18,8 @@ import { CrystalButton } from 'crystalplus-ui'
   flex-wrap: wrap;
   gap: 12px;
 }
+
+html.dark .button-group {
+  background-color: transparent;
+}
 </style>

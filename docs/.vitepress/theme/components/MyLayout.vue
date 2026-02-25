@@ -3,11 +3,30 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, provide } from 'vue'
+import { nextTick, provide, watch, onMounted } from 'vue'
 import backtotop from "./backtotop.vue"
 import bsz from "./bsz.vue"
 
 const { isDark } = useData()
+
+// 同步黑暗模式到 html 标签
+const syncDarkMode = () => {
+  if (isDark.value) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}
+
+// 初始化时同步一次
+onMounted(() => {
+  syncDarkMode()
+})
+
+// 监听 isDark 变化，同步黑暗模式
+watch(isDark, () => {
+  syncDarkMode()
+})
 
 const enableTransitions = () =>
   'startViewTransition' in document &&
