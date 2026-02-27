@@ -67,7 +67,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import { CrystalSwitch } from "crystalplus-ui"
-import { ElIcon, Check, Close } from "element-plus"
+import { ElIcon} from "element-plus"
 import { ElMessage, ElMessageBox } from "element-plus"
 
 // 自定义值

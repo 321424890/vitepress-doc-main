@@ -1,12 +1,17 @@
 <template>
   <div class="demo-container">
     <div class="demo-content">
-      <Suspense>
-        <component :is="demoComponent" v-if="demoComponent" />
+      <ClientOnly>
+        <Suspense>
+          <component :is="demoComponent" v-if="demoComponent" />
+          <template #fallback>
+            <div style="padding: 24px; text-align: center; color: #666;">加载中...</div>
+          </template>
+        </Suspense>
         <template #fallback>
           <div style="padding: 24px; text-align: center; color: #666;">加载中...</div>
         </template>
-      </Suspense>
+      </ClientOnly>
     </div>
     <div class="demo-code">
       <div class="demo-code-header">
@@ -63,25 +68,14 @@ const props = defineProps({
 const showCode = ref(false)
 const demoComponent = shallowRef<any>(null)
 
-// 添加调试信息
-console.log('Demo 组件被调用，props:', {
-  code: props.code ? props.code.substring(0, 50) + '...' : '无',
-  componentName: props.componentName,
-  importPath: props.importPath,
-  lang: props.lang,
-  title: props.title
-})
-
-// 使用 import.meta.glob 预加载所有组件，避免动态导入路径问题
-// 这样可以避免 MIME 类型错误
+// 使用 import.meta.glob 预加载所有组件
+// 从 docs/.vitepress/theme/components/ 到 docs/components/ 需用 ../../../components
 // @ts-ignore - Vite 的 import.meta.glob 在 TypeScript 中需要忽略类型检查
-const componentModules = import.meta.glob('../../components/**/*.vue', { eager: false })
+const componentModules = import.meta.glob('../../../components/**/*.vue', { eager: false })
 
 // 使用 defineAsyncComponent 动态导入组件
 if (props.importPath) {
-  console.log('[Demo] 开始设置动态导入，路径:', props.importPath)
   
-  // 构建正确的导入路径
   let importPath = props.importPath
   
   // 确保路径以 .vue 结尾
@@ -97,20 +91,14 @@ if (props.importPath) {
   // 从 .vitepress/theme/components/ 到 docs/components/ 的路径
   const globPath = `../../../${importPath}`
   
-  console.log('[Demo] 原始路径:', props.importPath)
-  console.log('[Demo] 转换后路径:', importPath)
-  console.log('[Demo] Glob 路径:', globPath)
-  console.log('[Demo] 可用的组件模块:', Object.keys(componentModules))
   
-  // 查找匹配的组件
   const matchedPath = Object.keys(componentModules).find(key => {
     // 匹配路径，例如: ../../components/basic/text/examples/BasicUsage.vue
     const normalizedKey = key.replace(/\\/g, '/')
     const normalizedImport = globPath.replace(/\\/g, '/')
-    return normalizedKey === normalizedImport || normalizedKey.endsWith(importPath)
+    const shortPath = importPath.replace(/^components\//, '')
+    return normalizedKey === normalizedImport || normalizedKey.endsWith(shortPath)
   })
-  
-  console.log('[Demo] 匹配的路径:', matchedPath)
   
   if (matchedPath && componentModules[matchedPath]) {
     // 使用预加载的组件
@@ -118,23 +106,20 @@ if (props.importPath) {
       loader: async () => {
         try {
           const module = await componentModules[matchedPath]()
-          console.log('[Demo] 从 glob 加载成功，模块:', module)
           if (module && (module.default || module)) {
             return module.default || module
           }
           throw new Error('组件模块格式不正确')
         } catch (error: any) {
-          console.error('[Demo] 从 glob 加载失败:', error)
           throw error
         }
       }
     })
   } else {
-    // 如果 glob 中没有找到，尝试直接导入（降级方案）
-    console.warn('[Demo] 在 glob 中未找到组件，尝试直接导入')
+    // 降级：使用 Vite 的 resolve alias，需确保 config 中配置 @demo 等
     const pathsToTry = [
-      globPath, // ../../components/basic/text/examples/BasicUsage.vue
-      `../../../../${importPath}`, // 相对路径
+      globPath,
+      `/docs/${importPath}`.replace(/\/+/g, '/'),
     ]
     
     demoComponent.value = defineAsyncComponent({
@@ -143,21 +128,17 @@ if (props.importPath) {
           let lastError: any = null
           for (const path of pathsToTry) {
             try {
-              console.log(`[Demo] 尝试直接导入路径: ${path}`)
               const module = await import(/* @vite-ignore */ path)
-              console.log('[Demo] 直接导入成功:', path)
               if (module && (module.default || module)) {
                 return module.default || module
               }
             } catch (e: any) {
               lastError = e
-              console.error(`[Demo] 路径 ${path} 导入失败:`, e.message)
               continue
             }
           }
           throw new Error(`无法加载组件: ${props.importPath}`)
         } catch (error: any) {
-          console.error('组件加载错误:', error)
           return {
             default: () => h('div', { 
               style: 'color: red; padding: 16px; border: 1px solid red; border-radius: 4px; margin: 16px;' 

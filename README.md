@@ -12,6 +12,12 @@
 
 ## 开发环境
 
+### 相关项目
+
+- **crystalplusui**：[在线文档地址](https://crystalui.cn)
+- **BL_Vue3_Admin**：[在线项目地址](http://admin.crystalui.cn)
+- **GitHub 仓库**：[项目仓库](https://github.com/321424890)
+
 ### 安装依赖
 
 ```bash

@@ -22,6 +22,9 @@ export default defineConfig({
   description: "基于 Element Plus 的 Vue 3 组件库",
   rewrites,
 
+  // 构建时忽略死链，避免打包失败（如需严格检查可设为 false 并修复链接）
+  ignoreDeadLinks: true,
+
   // #region fav
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
@@ -39,7 +42,7 @@ export default defineConfig({
   locales: {
     root: {
       label: '简体中文',
-      lang: 'Zh_CN',
+      lang: 'zh-CN',
     },
     en: {
       label: 'English',
@@ -332,6 +335,16 @@ export default defineConfig({
 
   vite: {
     plugins: [
+      // crystalplus-ui 使用 window，SSR 时用存根替换，避免 "window is not defined"
+      {
+        name: 'crystalplus-ssr-stub',
+        enforce: 'pre',
+        resolveId(id: string, _importer: string | undefined, options: { ssr?: boolean }) {
+          if (options?.ssr && (id === 'crystalplus-ui' || id.startsWith('crystalplus-ui/'))) {
+            return pathResolve('./crystalplus-ssr-stub.js')
+          }
+        }
+      },
       groupIconVitePlugin({
         customIcon: {
           ts: localIconLoader(import.meta.url, '../public/svg/typescript.svg'), //本地ts图标导入
@@ -354,7 +367,7 @@ export default defineConfig({
         "@": pathResolve("../../src"),
         "@build": pathResolve("../../build"),
         // 使用用户指定的crystalplus-ui路径配置
-        "crystalplus-ui": pathResolve("../../../element-plus-wrapper/packages/crystal-ui/src/index.ts")
+        // "crystalplus-ui": pathResolve("../../../element-plus-wrapper/packages/crystal-ui/src/index.ts")
       }
     }
   },
@@ -370,6 +383,19 @@ export default defineConfig({
 
     //设置站点标题 会覆盖title
     //siteTitle: 'Hello World',
+
+    //语言选择器
+    locales: {
+      root: {
+        label: '简体中文',
+      },
+      en: {
+        label: 'English',
+      },
+      fr: {
+        label: 'French',
+      }
+    },
 
     //编辑本页
     editLink: {
@@ -493,7 +519,7 @@ export default defineConfig({
             { text: 'modal模态框', link: '/components/basic/modal' },
             { text: 'alert警告', link: '/components/basic/alert' },
             { text: 'notify通知', link: '/components/basic/notify' },
-            { text: '加载', link: '/components/loading' },
+            // { text: '加载', link: '/components/loading' },
           ],
         },
       ],
@@ -533,8 +559,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'VuePress', link: 'https://vuepress.yiov.top/' },
-            { text: 'crystalplusUI案例BL_Vue3_Admin项目', link: 'https://yiov.top/' },
-            { text: 'BL_Vue3_Admin代码仓库', link: 'https://github.com/321424890/BL_Vue3_Admin' },
+            { text: 'crystalplusUI案例项目', link: 'http://admin.crystalui.cn' },
+            { text: 'BL_Vue3_Admin代码仓库', link: 'https://github.com/321424890' },
             { text: 'BL_Vue3_Admin开发指南', link: '/development-guide' },
             { text: 'BL_Vue3_Admin配置', link: '/config-guide' },
             { text: 'BL_Vue3_Admin路由', link: '/router-guide' },

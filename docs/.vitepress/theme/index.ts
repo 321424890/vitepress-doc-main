@@ -3,8 +3,12 @@ import DefaultTheme from 'vitepress/theme'
 // Element Plus 语言设置
 import ElementPlus from 'element-plus'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+// Element Plus 样式
+import 'element-plus/dist/index.css'
 // Element Plus 暗黑模式样式
 import 'element-plus/theme-chalk/dark/css-vars.css'
+// crystalplus-ui 组件样式
+import 'crystalplus-ui/dist/index.css'
 
 // giscusTalk
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
@@ -97,13 +101,10 @@ export default {
       props.class = frontmatter.value.layoutClass
     }
 
-    // return h(DefaultTheme.Layout, props, {
-    //   'layout-bottom': () => h(bsz), //不蒜子layout-bottom插槽
-    //   'doc-footer-before': () => h(backtotop), // 返回顶部doc-footer-before插槽
-    //   'layout-top': () => h(notice), // 公告layout-top插槽
-    // })
-
-    return h(MyLayout,props)
+    return h(DefaultTheme.Layout, props, {
+      'layout-bottom': () => h(bsz), //不蒜子layout-bottom插槽
+      'doc-footer-before': () => h(backtotop), // 返回顶部doc-footer-before插槽
+    })
   },
   
   // medium-zoom

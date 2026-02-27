@@ -70,6 +70,8 @@ const formGroups = ref([
             type: 'select',
             placeholder: '请选择项目经理',
             required: true,
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: '张三', value: 'zhangsan' },
               { label: '李四', value: 'lisi' },
@@ -82,6 +84,8 @@ const formGroups = ref([
             label: '项目状态',
             type: 'select',
             placeholder: '请选择项目状态',
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: '进行中', value: 'in_progress' },
               { label: '已完成', value: 'completed' },

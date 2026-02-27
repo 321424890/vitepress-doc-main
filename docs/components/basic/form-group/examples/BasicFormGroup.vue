@@ -64,6 +64,8 @@ const formGroups = ref([
             type: "select",
             required: true,
             placeholder: "请选择管理员",
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: "管理员1", value: "manager1" },
               { label: "管理员2", value: "manager2" },
@@ -80,6 +82,8 @@ const formGroups = ref([
             label: "审批人",
             type: "select",
             placeholder: "请选择审批人",
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: "审批人1", value: "approver1" },
               { label: "审批人2", value: "approver2" },
@@ -99,6 +103,8 @@ const formGroups = ref([
             label: "仓库类型",
             type: "select",
             placeholder: "请选择仓库类型",
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: "普通仓库", value: "normal" },
               { label: "冷链仓库", value: "cold" },
@@ -137,6 +143,8 @@ const formGroups = ref([
             type: "select",
             required: true,
             placeholder: "请选择执行人",
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: "执行人1", value: "executor1" },
               { label: "执行人2", value: "executor2" },
@@ -153,6 +161,8 @@ const formGroups = ref([
             label: "负责人",
             type: "select",
             placeholder: "请选择负责人",
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: "负责人1", value: "resp1" },
               { label: "负责人2", value: "resp2" },
@@ -172,6 +182,8 @@ const formGroups = ref([
             label: "任务类型",
             type: "select",
             placeholder: "请选择任务类型",
+            filterable: true, // 可搜索
+            clearable: true, // 可清空
             options: [
               { label: "日常任务", value: "daily" },
               { label: "紧急任务", value: "urgent" },

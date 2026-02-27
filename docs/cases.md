@@ -6,11 +6,10 @@
 
 ### 在线案例
 
-| 案例名称 | 描述 | 访问链接 | GitHub 地址 |
-| ---- | ---- | ---- | ---- |
-| 官方文档站 | crystalplus UI 组件库官方文档网站 | [https://yiov.top/](https://yiov.top/) | [GitHub 仓库](https://github.com/321424890/vitepress-doc-main) |
-| 管理系统模板 | 基于 crystalplus UI 构建的后台管理系统模板 | [https://yiov.top/](https://yiov.top/) | [GitHub 仓库](https://github.com/321424890/vitepress-doc-main) |
-| 电商前台模板 | 基于 crystalplus UI 构建的电商前台页面模板 | [https://yiov.top/](https://yiov.top/) | [GitHub 仓库](https://github.com/321424890/vitepress-doc-main) |
+| 案例名称     | 描述                                       | 访问链接                  | GitHub 地址                                                    |
+| ------------ | ------------------------------------------ | ------------------------- | -------------------------------------------------------------- |
+| 官方文档站   | crystalplus UI 组件库官方文档网站          | https://crystalui.cn      | [GitHub 仓库](https://github.com/321424890/vitepress-doc-main) |
+| 管理系统模板 | 基于 crystalplus UI 构建的后台管理系统模板 | http://admin.crystalui.cn | [GitHub 仓库](https://github.com/321424890)                    |
 
 ## 如何运行案例
 

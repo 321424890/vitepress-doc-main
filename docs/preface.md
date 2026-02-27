@@ -13,6 +13,11 @@
 - **最佳实践**：分享基于 Vue 3 和 Element Plus 的开发经验
 - **API 参考**：详细的组件 API 文档和示例代码
 
+### 相关项目
+
+- **BL_Vue3_Admin**：[项目地址](http://admin.crystalui.cn)
+- **GitHub 仓库**：[项目仓库](https://github.com/321424890)
+
 ## 核心特性
 
 ### 📚 内容架构
